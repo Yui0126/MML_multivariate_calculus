@@ -128,19 +128,3 @@ def J_b1 (x, y) :
     J = np.sum(J, axis=1, keepdims=True) / x.size
     return J
 
-
-#%%
-
-# below is for practice
-import numpy as np
-
-n1 = 7
-n2 = 6
-
-x = np.random.randn(n2, n1)
-x = x/2
-print(x)
-
-
-
-# %%
