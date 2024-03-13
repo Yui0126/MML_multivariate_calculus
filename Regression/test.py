@@ -10,13 +10,20 @@ ybar = np.sum(ydat)/len(ydat)
 print(xbar)
 print(ybar)
 
+num = list()
+den = list()
+
 for i, y in zip(xdat, ydat):
-    num = np.sum((i - xbar) * y)
-    den = np.sum((i - xbar) ** 2)
+    n = (i - xbar) * y
+    d = (i - xbar) ** 2
+    num.append(n)
+    den.append(d)
 
+m = sum(num)/sum(den)
+c = ybar-m*xbar
 
-print(num)
-print(den)
+print(m)
+print(c)
 
 # m = num/den
 # c = ybar-m*xbar
